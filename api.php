@@ -37,49 +37,50 @@ $api = json_decode($response, true);
 
 <body>
 
+  <div class="main">
+    <h1 class="titulo">EPISODIOS DE RICKY AND MORTY</h1>
 
-  <h1 class="titulo">EPISODIOS DE RICKY AND MORTY</h1>
-  
-  <div class="contenedor d-flex align-content-start flex-wrap">
-    <?php
-    foreach ($api['results'] as $key
-      => $value) {
+    <div class="contenedor d-flex align-content-start flex-wrap">
+      <?php
+      foreach ($api['results'] as $key
+        => $value) {
 
-      $id = $value['id'];
-      $name = $value['name'];
-      $air_date = $value['air_date'];
-      $episode = $value['episode'];
-      $characters = $value['characters'];
-      $created = $value['created'];
+        $id = $value['id'];
+        $name = $value['name'];
+        $air_date = $value['air_date'];
+        $episode = $value['episode'];
+        $characters = $value['characters'];
+        $created = $value['created'];
 
-    ?>
-      <div class="row">
+      ?>
+        <div class="row">
 
-        <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h6 class="card-title"><?php echo $id ?></h6>
-            <br/>
-            
-            <h6 class="card-title"><?php echo $name ?></h6>
-            <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/06/rick-morty-2381623.jpg?itok=KbiMtfiF" width="260px" height="150px">
-            <br/>
-            <small class="text-muted"><?php echo $air_date ?></small>
-            <p class="card-text"><?php echo $episode ?></p>
-            
-              <p ><?php echo $created ?></p>
-           
-           
-            <form action="detalle.php" method="POST">
-              <button type="subtmit" class="btn btn-dark">Detalle</button>
-            </form>
+            <div class="card-body">
+              <h6 class="card-title"><?php echo $id ?></h6>
+              <br />
+
+              <h6 class="card-title"><?php echo $name ?></h6>
+              <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/06/rick-morty-2381623.jpg?itok=KbiMtfiF" width="260px" height="150px">
+              <br />
+              <small class="text-muted"><?php echo $air_date ?></small>
+              <p class="card-text"><?php echo $episode ?></p>
+
+              <p><?php echo $created ?></p>
+
+
+              <form action="detalle.php" method="POST">
+                <button type="subtmit" class="btn btn-dark">Detalle</button>
+              </form>
+            </div>
+
           </div>
-
         </div>
-      </div>
-    <?php
-    }
-    ?>
+      <?php
+      }
+      ?>
+    </div>
   </div>
   </div>
 
