@@ -3,6 +3,12 @@
   margin: 0;
   box-sizing: content-box;
 }
+
+.main {
+  width: 100%;
+  display: grid;
+}
+
 body {
   background: url(https://c4.wallpaperflare.com/wallpaper/22/240/855/texture-gradient-simple-background-blue-wallpaper-preview.jpg);
 }
@@ -14,16 +20,17 @@ body {
 }
 
 .row {
-  padding: 45px;
+  padding: 15px;
 }
 
 .contenedor {
-  padding: 10px;
+  justify-content: center;
+  padding: 15px;
   display: flex;
   flex-direction: row;
-  gap: 90px;
+  gap: 10px;
 }
-¿ .card {
+.card {
   border-color: rgb(255, 255, 255);
   box-shadow: 2px 2px 2px 1px rgba(255, 253, 253, 0.2);
 }
